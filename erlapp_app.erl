@@ -14,6 +14,7 @@
 %% ~~~~~~~~~~~~~~~~~~~~~
 
 start(_StartType, _StartArgs) ->
+    {{#lager}}lager:start(),{{/lager}}
     {{appid}}_sup:start_link().
 
 stop(_State) ->
